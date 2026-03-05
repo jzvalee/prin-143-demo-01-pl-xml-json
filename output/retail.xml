@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<retail>
+	<batchNumber>67</batchNumber>
+	<brandName>Candy</brandName>
+	<category>Alcohol</category>
+	<expiry>2026-12-12</expiry>
+	<price>1.0</price>
+</retail>

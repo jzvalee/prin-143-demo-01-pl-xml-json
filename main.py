@@ -1,5 +1,10 @@
 from models.student import Student
 from models.subject import Subject
+from models.retail import Retail
+from models.recordmanagement import RecordManagement
+from models.governmentservices import GovernmentServices
+from models.financialrecords import FinancialRecords
+from models.entertainment import Entertainment
 from utilities.utilities import write_to_json, write_to_xml
 
 subject = Subject(code = "PRIN143", students=[
@@ -44,7 +49,32 @@ subject = Subject(code = "PRIN143", students=[
     , Student(lastName="VILLANUEVA", firstName="NICHO SEBASTIAN", address="Apalit, Pampanga", reason="Ayaw mag medicine related course.", expectation="Too many to mention.")
 ])
 
-fileName = subject.__class__.__name__.lower()
+retail = Retail(brandName = "Candy", price = 1.00, expiry = "2026-12-12", batchNumber = "67", category = "Alcohol")
+fileName = retail.__class__.__name__.lower()
 
-write_to_xml(subject.as_xml(), fileName)
-write_to_json(subject.as_json(), fileName)
+write_to_xml(retail.as_xml(), fileName)
+write_to_json(retail.as_json(), fileName)
+
+recordmanagement = RecordManagement(StudentNumber = "2024-34122", Name = "Jazrel Vale", Age = "20", Section = "BSIT-2A", TuitionPlan = "Plan C")
+fileName1 = recordmanagement.__class__.__name__.lower()
+
+write_to_xml(recordmanagement.as_xml(), fileName1)
+write_to_json(recordmanagement.as_json(), fileName1)
+
+governmentservices = GovernmentServices(Name = "Jeffrey Epstein", Age = "66", Platform = "Private Island", Record = "Clean", Vote = "Yes")
+fileName2 = governmentservices.__class__.__name__.lower()
+
+write_to_xml(governmentservices.as_xml(), fileName2)
+write_to_json(governmentservices.as_json(), fileName2)
+
+financialrecords = FinancialRecords(Number = "12345678910", Name = "Richard", Balance = "$1,000,000,000", PhoneNumber = "0921478763", Debt = "$500,000,000")
+fileName3 = financialrecords.__class__.__name__.lower()
+
+write_to_xml(financialrecords.as_xml(), fileName3)
+write_to_json(financialrecords.as_json(), fileName3)
+
+entertainment = Entertainment(Title = "Insterstellar", Genre = "Sci-fi", Length = "2h:49m", Rated = "PG-13", Price = "$200")
+fileName4 = Entertainment.__class__.__name__.lower()
+
+write_to_xml(entertainment.as_xml(), fileName4)
+write_to_json(entertainment.as_json(), fileName4)
